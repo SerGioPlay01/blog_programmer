@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#3aea66">
+    <meta name="title" content="Введение в скриптинг Bash">
+    <meta name="description"
+        content="Познакомьтесь с написанием скриптов на языке bash в этом крупном руководстве для начинающих.">
+    <meta name="keywords" content="Инкапсуляция, Python, C#, JavaScript, что такое Инкапсуляция">
+    <meta name="author" content="Блог программиста">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph (og) метатеги -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Введение в скриптинг Bash">
+    <meta property="og:description"
+        content="Познакомьтесь с написанием скриптов на языке bash в этом крупном руководстве для начинающих.">
+    <meta property="og:url" content="/post/encapsulation_in_oop.html">
+    <meta property="og:image" content="/resources/images/preview.jpg">
+    <meta property="og:image:width" content="1920">
+    <meta property="og:image:height" content="768">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:site_name" content="Блог программиста">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="/resources/site.webmanifest" />
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/menu.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Введение в скриптинг Bash</title>
+</head>
+
+<body>
+    <header class="top_header">
+        <div class="logo_div">
+            <span class="logo"></span>
+            <h2 class="name_site">Блог Программиста</h2>
+        </div>
+        <div class="menu_icon_div">
+            <span class="icon" id="open_menu"></span>
+        </div>
+    </header>
+
+    <div class="menu_div" id="menu">
+        <div class="list_el_menu">
+            <a href="/" class="link_menu">Главная</a>
+            <a href="https://super-empanada-b0a124.netlify.app/" class="link_menu">Автор блога</a>
+        </div>
+        <div class="social_link">
+
+        </div>
+        <span class="icon_close" id="close_menu"></span>
+    </div>
+
+    <section class="center_page_conent">
+        <section class="page_content_type_list">
+            <h2 class="tag_name">Введение в скриптинг Bash</h2>
+            <div class="content_post">
+                <details class="link_yakors">
+                    <summary>Содержание страницы</summary>
+                    <div class="list_nav">
+                        <a href="#what" class="link_post">Инкапсуляция — это?</a>
+                        <a href="#js" class="link_post">В JavaScript</a>
+                        <a href="#python" class="link_post">В Python</a>
+                        <a href="#csharp" class="link_post">В C#</a>
+                        <a href="#Benefits_of_encapsulation" class="link_post">Преимущества инкапсуляции</a>
+                        <a href="#Conclusion" class="link_post">Заключение</a>
+                    </div>
+                </details>
+                <p class="text">
+                    <b>Shell</b> — это основная часть Linux. Она позволяет взаимодействовать с ядром Linux с помощью
+                    различных команд, таких
+                    как cd, ls, cat и т. д.
+                    <br><br>
+                    <b>Bash</b> — одна из многих доступных оболочек для Linux. Они имеют в основном общий, но не
+                    идентичный синтаксис. Bash —
+                    самая популярная оболочка, которая используется по умолчанию в большинстве дистрибутивов Linux.
+                    <br><br>
+                    Вы открываете терминал или сеанс SSH, и у вас запущена оболочка, даже если вы не можете ее
+                    визуализировать.
+                </p>
+                <figure>
+                    <img src="/resources/images/image.png" alt="" class="img_post">
+                    <figcaption>Когда вы вводите команду, она интерпретируется оболочкой. Если команда и синтаксис
+                        верны, она будет выполнена, в противном случае вы увидите ошибку.</figcaption>
+                </figure>
+                <h3>Зачем нужны bash-скрипты, если можно просто запустить команды Linux?</h3>
+                <p class="text">
+                    Вы можете вводить команды прямо в терминале, и они будут выполнены.
+                </p>
+                <pre>
+                    <code>
+abhishek@itsfoss:~$ echo "hello world"
+hello world
+                    </code>
+                    <button class="copy-button" onclick="copyCode()">Скопировать</button>
+                </pre>
+                <p class="text">
+                    То же самое можно сделать и в скрипте:
+                </p>
+                <pre>
+                    <code>
+                        abhishek@itsfoss:~$ cat >> script.sh
+                        #!/bin/bash
+
+                        echo "hello world"
+                        abhishek@itsfoss:~$ bash script.sh
+                        hello world
+                    </code>
+                    <button class="copy-button" onclick="copyCode()">Скопировать</button>
+                </pre>
+                <p class="tex">
+                    Зачем тогда нужны скрипты оболочки? Потому что вам не нужно вводить одну и ту же команду снова и
+                    снова. Вы просто
+                    запускаете скрипт оболочки.
+                    <br><br>
+                    Кроме того, если в вашем скрипте сложная логика, вводить ее всю в терминале будет не очень хорошей
+                    идеей.
+                    <br><br>
+                    Например, если ввести команду ниже, она сработает. Но ее нелегко понять, и вводить ее снова и снова
+                    (или даже искать
+                    ее в истории bash) — это больно.
+                </p>
+                <pre>
+                    <code>
+                        if [ $(whoami) = 'root' ]; then echo "root"; else echo "not root"; fi
+                    </code>
+                    <button class="copy-button" onclick="copyCode()">Скопировать</button>
+                </pre>
+                <p class="text">Вместо этого вы можете вставить скрипт оболочки, чтобы его было легче понять и запустить
+                    без особых усилий:</p>
+                <pre>
+                    <code>
+                        #!/bin/bash
+
+                        if [ $(whoami) = 'root' ]; then
+                            echo "You are root"
+                        else
+                            echo "You are not root"
+                        fi
+                    </code>
+                    <button class="copy-button" onclick="copyCode()">Скопировать</button>
+                </pre>
+                <p class="text">
+                    Это было еще просто. Представьте себе сложный сценарий из пятидесяти или ста строк!
+                </p>
+            </div>
+        </section>
+    </section>
+
+    <script src="/js/menu.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/copy.js"></script>
+</body>
+
+</html>
