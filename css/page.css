@@ -3,6 +3,12 @@
     padding: 20px;
     border-radius: 8px;
   }
+  .rrr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
   .buttons {
     display: flex;
     gap: 10px;
@@ -45,7 +51,14 @@
     font-family: "Courier New", Courier, monospace;
     color: #02250b;
   }
-
+  input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 80%;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
   .output-area {
     margin-top: 20px;
   }
