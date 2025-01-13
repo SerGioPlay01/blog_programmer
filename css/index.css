@@ -138,6 +138,7 @@ figcaption {
     text-decoration: none;
     color: #158e33;
     font-weight: 700;
+    width: fit-content;
 }
 blockquote {
     background-color: #158e33;
