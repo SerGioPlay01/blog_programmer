@@ -172,6 +172,7 @@ pre {
     color: #ffffff;
 }
 code {
+    position: relative;
     font-size: 1em;
 }
 .copy-button {
