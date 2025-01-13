@@ -65,7 +65,7 @@
                 <section class="converter">
                     <div class="rrr">
                         <div id="colorPreview" style="width: 100px; height: 50px; margin: 10px auto; border: 1px solid #ccc; background-color: #fff;"></div>
-                        <input id="hexInput" type="text" placeholder="Введите цвет в формате HEX (#RRGGBB)" oninput="prependHash(); updatePreview()">
+                        <input id="hexInput" type="color" value="#ffffff" onchange="updatePreview(); convertHexToRgb();">
                         <label>Красный: <input id="redValue" type="text" readonly></label>
                         <label>Зелёный: <input id="greenValue" type="text" readonly></label>
                         <label>Синий: <input id="blueValue" type="text" readonly></label>
