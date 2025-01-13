@@ -155,6 +155,7 @@ details {
     margin: 5px;
 }
 pre {
+    overflow-x: auto;
     background-color: #054f18;
     width: 100%;
     border-radius: 20px;
