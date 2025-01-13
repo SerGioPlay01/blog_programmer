@@ -175,18 +175,6 @@ code {
     position: relative;
     font-size: 1em;
 }
-.copy-button {
-    position: sticky;
-    top: 30px;
-    right: 30px;
-    padding: 5px 10px;
-    background-color: #0ea93c7c;
-    backdrop-filter: blur(40px);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
 .list_nav {
     background-color: #ffffff;
     display: flex;
@@ -208,9 +196,6 @@ code {
     .link_post:hover {
         color: #054f18;
         transition: 0.3s all ease-in-out;
-    }
-    .copy-button:hover {
-        background-color: #269c53;
     }
 }
 

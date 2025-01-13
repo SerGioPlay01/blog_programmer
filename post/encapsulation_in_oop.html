@@ -124,9 +124,7 @@
                         const person = new Person('Alice');
                         console.log(person.getName()); // Alice
                         console.log(person._name); // Доступ есть, но не рекомендуется
-                    </code>
-                    <button class="copy-button" onclick="copyCode()">Скопировать</button>
-                </pre>
+                    </code></pre>
                     2. Использование замыканий:
                     <pre><code>
                         function createPerson(name) {
@@ -146,9 +144,7 @@
                         console.log(person.getName()); // Alice
                         person.setName('Bob');
                         console.log(person.getName()); // Bob
-                    </code>
-                    <button class="copy-button" onclick="copyCode()">Скопировать</button>
-                </pre>
+                    </code></pre>
                     3. Приватные поля с использованием `` (начиная с ES2021):
                     <pre><code>
                         class Person {
@@ -166,9 +162,7 @@
                         const person = new Person('Alice');
                         console.log(person.getName()); // Alice
                         console.log(person.#name); // Ошибка: Private field '#name' must be declared in an enclosing class
-                    </code>
-                    <button class="copy-button" onclick="copyCode()">Скопировать</button>
-                </pre>
+                    </code></pre>
                 </p>
                 <b id="python">В Python</b>
                 <i>Python не предоставляет строгой приватности, но поддерживает соглашение об именах для обозначения
@@ -186,9 +180,7 @@
                     person = Person("Alice")
                     print(person.get_name())  # Alice
                     print(person._name)  # Доступ есть, но не рекомендуется
-                </code>
-                <button class="copy-button" onclick="copyCode()">Скопировать</button>
-            </pre>
+                </code></pre>
                 2. Манглинг имен (двойное подчёркивание):
                 <i>Для большей защищённости Python использует механизм манглинга (искажения) имён, добавляя имя класса
                     перед приватным атрибутом</i>
@@ -204,9 +196,7 @@
                     print(person.get_name())  # Alice
                     print(person.__name)  # AttributeError
                     print(person._Person__name)  # Alice
-                </code>
-                <button class="copy-button" onclick="copyCode()">Скопировать</button>
-            </pre>
+                </code></pre>
                 <b id="csharp">В C#</b>
                 <i>C# предоставляет строгую поддержку инкапсуляции через модификаторы доступа (private, protected,
                     public и т.д.).</i>
@@ -238,7 +228,6 @@ class Program
     }
 }
                     </code>
-                    <button class="copy-button" onclick="copyCode()">Скопировать</button>
                 </pre>
                 2. Свойства (Properties):
                 <i>Свойства позволяют управлять доступом к приватным полям</i>
@@ -271,7 +260,6 @@ class Program
     }
 }
                     </code>
-                    <button class="copy-button" onclick="copyCode()">Скопировать</button>
                 </pre>
                 <p class="text" id="Benefits_of_encapsulation">
                     <b>Преимущества инкапсуляции</b>
@@ -296,7 +284,6 @@ class Program
 
     <script src="/js/menu.js"></script>
     <script src="/js/script.js"></script>
-    <script src="/js/copy.js"></script>
 </body>
 
 </html>
