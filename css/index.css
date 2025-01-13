@@ -104,6 +104,9 @@ body {
 .title_post {
 }
 /* End */
+.tag_menu {
+    color: #ffffff;
+}
 /* Post */
 
 .content_post, .content {
