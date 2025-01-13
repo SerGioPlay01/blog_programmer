@@ -5,7 +5,7 @@
   }
   .rrr {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
   }
@@ -54,7 +54,7 @@
   input[type="text"] {
     padding: 10px;
     font-size: 16px;
-    width: 80%;
+    width: 50%;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
