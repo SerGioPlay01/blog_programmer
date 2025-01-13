@@ -1,19 +1,22 @@
 function encodeBase64() {
     const input = document.getElementById('inputText').value;
     try {
-      const encoded = btoa(input);
+      // Преобразование текста в байты UTF-8 перед кодированием
+      const encoded = btoa(unescape(encodeURIComponent(input)));
       document.getElementById('outputText').value = encoded;
     } catch (error) {
-      document.getElementById('outputText').value = "Error: Invalid input for encoding!";
+      document.getElementById('outputText').value = "Ошибка: Неверный ввод для кодирования!";
     }
   }
-
+  
   function decodeBase64() {
     const input = document.getElementById('inputText').value;
     try {
-      const decoded = atob(input);
+      // Декодирование строки Base64 и преобразование обратно в текст UTF-8
+      const decoded = decodeURIComponent(escape(atob(input)));
       document.getElementById('outputText').value = decoded;
     } catch (error) {
-      document.getElementById('outputText').value = "Error: Invalid Base64 string!";
+      document.getElementById('outputText').value = "Ошибка: Неверная строка Base64!";
     }
   }
+  
