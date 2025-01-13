@@ -175,7 +175,7 @@ code {
     font-size: 1em;
 }
 .copy-button {
-    position: absolute;
+    position: sticky;
     top: 30px;
     right: 30px;
     padding: 5px 10px;
