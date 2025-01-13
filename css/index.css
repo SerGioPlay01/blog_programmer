@@ -111,6 +111,9 @@ body {
     flex-direction: column;
     gap: 20px;
 }
+ol, ul {
+    padding-left: 5%;
+}
 .text {
     line-height: 1.5;
 }
