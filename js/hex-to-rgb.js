@@ -1,16 +1,29 @@
+function prependHash() {
+    const hexInput = document.getElementById('hexInput');
+    if (!hexInput.value.startsWith('#')) {
+        hexInput.value = '#' + hexInput.value.replace(/^#/, '');
+    }
+}
+
+function updatePreview() {
+    const hexInput = document.getElementById('hexInput').value.trim();
+    const colorPreview = document.getElementById('colorPreview');
+
+    const hexPattern = /^#?([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$/;
+    if (hexPattern.test(hexInput)) {
+        const hex = hexInput.startsWith('#') ? hexInput : `#${hexInput}`;
+        colorPreview.style.backgroundColor = hex;
+    } else {
+        colorPreview.style.backgroundColor = '#fff';
+    }
+}
+
 function convertHexToRgb() {
     const hexInput = document.getElementById('hexInput').value.trim();
     const redValue = document.getElementById('redValue');
     const greenValue = document.getElementById('greenValue');
     const blueValue = document.getElementById('blueValue');
     const outputElement = document.getElementById('output');
-
-    function prependHash() {
-        const hexInput = document.getElementById('hexInput');
-        if (!hexInput.value.startsWith('#')) {
-            hexInput.value = '#' + hexInput.value.replace(/^#/, '');
-        }
-    }
 
     // Validate HEX input
     const hexPattern = /^#?([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$/;
