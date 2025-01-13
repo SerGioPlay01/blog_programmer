@@ -106,7 +106,7 @@ body {
 /* End */
 /* Post */
 
-.content_post {
+.content_post, .content {
     display: flex;
     flex-direction: column;
     gap: 20px;
