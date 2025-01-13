@@ -158,6 +158,9 @@ pre {
     padding: 20px;
     color: #ffffff;
 }
+code {
+    font-size: 1.4em;
+}
 .list_nav {
     background-color: #ffffff;
     display: flex;
