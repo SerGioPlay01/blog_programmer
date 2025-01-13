@@ -4,19 +4,17 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="theme-color" content="#3aea66">
-    <meta name="title" content="Конвертировать CSV в JSON">
+    <meta name="title" content="Кодирование/декодирование Base64">
     <meta name="description"
-        content="Конвертировать CSV в JSON">
-    <meta name="keywords"
-        content="Инкапсуляция, Python, C#, JavaScript, что такое Инкапсуляция">
+        content="Кодирование/декодирование Base64">
     <meta name="author" content="Блог программиста">
     <meta name="robots" content="index, follow">
 
     <!-- Open Graph (og) метатеги -->
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Конвертировать CSV в JSON">
+    <meta property="og:title" content="Кодирование/декодирование Base64">
     <meta property="og:description"
-        content="Конвертировать CSV в JSON">
+        content="Кодирование/декодирование Base64">
     <meta property="og:url" content="/">
     <meta property="og:image" content="/resources/images/preview.jpg">
     <meta property="og:image:width" content="1920">
@@ -33,7 +31,7 @@
     <link rel="stylesheet" href="/css/page.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Конвертировать CSV в JSON</title>
+    <title>Кодирование/декодирование Base64</title>
 </head>
 
 <body>
@@ -60,14 +58,16 @@
 
     <section class="center_page_conent">
         <section class="page_content_type_list">
-            <h2 class="tag_name">Конвертировать CSV в JSON</h2>
+            <h2 class="tag_name">Кодирование/декодирование Base64</h2>
             <div class="content">
-                <section class="converter">
-                    <textarea id="csvInput" placeholder="Paste your CSV data here"></textarea>
-                    <button onclick="convertCsvToJson()">Конвертировать</button>
-                    <br><br>
-                    <h3>JSON:</h3>
-                    <pre id="jsonOutput">Ваш JSON будет здесь...</pre>
+                <section class="encoder-decoder">
+                    <textarea id="inputText" placeholder="Введите текст для кодирования или строку Base64 для декодирования"></textarea>
+                    <div class="buttons">
+                      <button onclick="encodeBase64()">Кодировать</button>
+                      <button onclick="decodeBase64()">Декодировать</button>
+                    </div>
+                    <h3>Вывод</h3>
+                    <textarea id="outputText" placeholder="Ваш результат появится здесь" readonly></textarea>
                   </section>
             </div>
         </section>
@@ -75,7 +75,7 @@
 
     <script src="/js/menu.js"></script>
     <script src="/js/script.js"></script>
-    <script src="/js/csv_to_json.js"></script>
+    <script src="/js/base64.js"></script>
 </body>
 
 </html>
