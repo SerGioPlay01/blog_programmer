@@ -179,7 +179,8 @@ code {
     top: 10px;
     right: 10px;
     padding: 5px 10px;
-    background-color: #007bff;
+    background-color: #0ea93c7c;
+    backdrop-filter: blur(40px);
     color: white;
     border: none;
     border-radius: 5px;
