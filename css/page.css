@@ -45,3 +45,16 @@
     font-family: "Courier New", Courier, monospace;
     color: #02250b;
   }
+
+  .output-area {
+    margin-top: 20px;
+  }
+
+  .output-area h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .output-area textarea {
+    height: 200px;
+  }
