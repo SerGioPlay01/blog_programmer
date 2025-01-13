@@ -1,0 +1,12 @@
+# Разрешить всем роботам доступ ко всем разделам сайта
+User-agent: *
+Allow: /
+
+# Запретить доступ к системным страницам
+Disallow: /css/
+Disallow: /.vscode/
+Disallow: /js/
+Disallow: /resources/
+
+# Указать путь к карте сайта
+Sitemap: /sitemap.xml
