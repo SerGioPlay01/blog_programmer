@@ -123,9 +123,7 @@
                         console.log(person.getName()); // Alice
                         console.log(person._name); // Доступ есть, но не рекомендуется
                     </code></pre>
-                    <br><br>
                     2. Использование замыканий:
-                    <br><br>
                     <pre><code>
                         function createPerson(name) {
                             let _name = name; // Приватная переменная
@@ -145,9 +143,7 @@
                         person.setName('Bob');
                         console.log(person.getName()); // Bob
                     </code></pre>
-                    <br><br>
                     3. Приватные поля с использованием `` (начиная с ES2021):
-                    <br><br>
                     <pre><code>
                         class Person {
                             #name; // Приватное поле
@@ -166,7 +162,6 @@
                         console.log(person.#name); // Ошибка: Private field '#name' must be declared in an enclosing class
                     </code></pre>
                 </p>
-                <br><br>
                 <b id="python">В Python</b>
                 <i>Python не предоставляет строгой приватности, но поддерживает соглашение об именах для обозначения
                     приватных атрибутов.</i>
@@ -184,11 +179,9 @@
                     print(person.get_name())  # Alice
                     print(person._name)  # Доступ есть, но не рекомендуется
                 </code></pre>
-                <br><br>
                 2. Манглинг имен (двойное подчёркивание):
                 <i>Для большей защищённости Python использует механизм манглинга (искажения) имён, добавляя имя класса
                     перед приватным атрибутом</i>
-                <br><br>
                 <pre><code>
                     class Person:
                         def __init__(self, name):
@@ -208,7 +201,6 @@
                     public и т.д.).</i>
                 <br><br>
                 1. Приватные поля и публичные методы:
-                <br><br>
                 <pre>
                     <code>
                         class Person
@@ -237,7 +229,6 @@ class Program
 }
                     </code>
                 </pre>
-                <br><br>
                 2. Свойства (Properties):
                 <i>Свойства позволяют управлять доступом к приватным полям</i>
                 <pre>
