@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#3aea66">
+    <meta name="title" content="Инкапсуляция в ООП и её реализация в JavaScript, Python и C#">
+    <meta name="description"
+        content="Инкапсуляция — это один из фундаментальных принципов объектно-ориентированного программирования (ООП), наряду с наследованием, полиморфизмом и абстракцией. Она играет ключевую роль в построении надежного и удобного кода.">
+    <meta name="keywords"
+        content="Инкапсуляция, Python, C#, JavaScript, что такое Инкапсуляция">
+    <meta name="author" content="Блог программиста">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph (og) метатеги -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Инкапсуляция в ООП и её реализация в JavaScript, Python и C#">
+    <meta property="og:description"
+        content="Инкапсуляция — это один из фундаментальных принципов объектно-ориентированного программирования (ООП), наряду с наследованием, полиморфизмом и абстракцией. Она играет ключевую роль в построении надежного и удобного кода.">
+    <meta property="og:url" content="/post/encapsulation_in_oop.html">
+    <meta property="og:image" content="/resources/images/preview.jpg">
+    <meta property="og:image:width" content="1920">
+    <meta property="og:image:height" content="768">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:site_name" content="Блог программиста">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="/resources/site.webmanifest" />
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/menu.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Инкапсуляция в ООП и её реализация в JavaScript, Python и C#</title>
+</head>
+
+<body>
+    <header class="top_header">
+        <div class="logo_div">
+            <span class="logo"></span>
+            <h2 class="name_site">Блог Программиста</h2>
+        </div>
+        <div class="menu_icon_div">
+            <span class="icon" id="open_menu"></span>
+        </div>
+    </header>
+
+    <div class="menu_div" id="menu">
+        <div class="list_el_menu">
+            <a href="/" class="link_menu">Главная</a>
+            <a href="https://super-empanada-b0a124.netlify.app/" class="link_menu">Автор блога</a>
+        </div>
+        <div class="social_link">
+
+        </div>
+        <span class="icon_close" id="close_menu"></span>
+    </div>
+
+    <section class="center_page_conent">
+        <section class="page_content_type_list">
+            <h2 class="tag_name">Инкапсуляция в ООП и её реализация в JavaScript, Python и C#</h2>
+            <div class="content_post">
+                <details class="link_yakors">
+                    <summary>Содержание страницы</summary>
+                    <div class="list_nav">
+                        <a href="#what" class="link_post">Инкапсуляция — это?</a>
+                        <a href="#js" class="link_post">В JavaScript</a>
+                        <a href="#python" class="link_post">В Python</a>
+                        <a href="#csharp" class="link_post">В C#</a>
+                    </div>
+                </details>
+                <p class="text" id="what">
+                    Инкапсуляция — это один из фундаментальных принципов объектно-ориентированного программирования
+                    (ООП), наряду с
+                    наследованием, полиморфизмом и абстракцией. Она играет ключевую роль в построении надежного и
+                    удобного кода.
+                </p>
+                <p class="text">
+                    <b>Что такое инкапсуляция?</b>
+                    <br><br>
+                    <b>Инкапсуляция</b> — это процесс сокрытия деталей реализации объекта и предоставления доступа к его
+                    данным только
+                    через специально определенные методы. Главная цель инкапсуляции — защитить внутреннее состояние
+                    объекта от прямого
+                    изменения, что позволяет:
+                <ol>
+                    <li>Сохранить целостность данных.</li>
+                    <li>Снизить вероятность появления ошибок.</li>
+                    <li>Скрыть сложность реализации.</li>
+                    <li>Предоставить понятный интерфейс для взаимодействия с объектом.</li>
+                </ol>
+                </p>
+                <p class="text">
+                    <b>Этимология термина</b>
+                    <br><br>
+                    Слово "инкапсуляция" происходит от латинского capsula — "коробочка" или "контейнер". Приставка "in-"
+                    означает
+                    "внутри". Таким образом, термин буквально означает "помещение чего-то в коробочку". Это хорошо
+                    отражает концепцию
+                    инкапсуляции: внутренние детали объекта помещаются в своеобразный контейнер, доступ к которому
+                    осуществляется только
+                    через определенные точки взаимодействия (методы).
+                </p>
+                <p class="text">
+                    <b>Как реализуется инкапсуляция?</b>
+                    <br><br>
+                    <b id="js">В JavaScript:</b>
+                    <br><br>
+                    1. Использование соглашений об именах:
+                    <pre><code>
+                        class Person {
+                            constructor(name) {
+                                this._name = name; // "Приватное" свойство
+                            }
+                        
+                            getName() {
+                                return this._name;
+                            }
+                        }
+                        
+                        const person = new Person('Alice');
+                        console.log(person.getName()); // Alice
+                        console.log(person._name); // Доступ есть, но не рекомендуется
+                    </code></pre>
+                    <br><br>
+                    2. Использование замыканий:
+                    <br><br>
+                    <pre><code>
+                        function createPerson(name) {
+                            let _name = name; // Приватная переменная
+                        
+                            return {
+                                getName() {
+                                    return _name;
+                                },
+                                setName(newName) {
+                                    _name = newName;
+                                }
+                            };
+                        }
+                        
+                        const person = createPerson('Alice');
+                        console.log(person.getName()); // Alice
+                        person.setName('Bob');
+                        console.log(person.getName()); // Bob
+                    </code></pre>
+                    <br><br>
+                    3. Приватные поля с использованием `` (начиная с ES2021):
+                    <br><br>
+                    <pre><code>
+                        class Person {
+                            #name; // Приватное поле
+                        
+                            constructor(name) {
+                                this.#name = name;
+                            }
+                        
+                            getName() {
+                                return this.#name;
+                            }
+                        }
+                        
+                        const person = new Person('Alice');
+                        console.log(person.getName()); // Alice
+                        console.log(person.#name); // Ошибка: Private field '#name' must be declared in an enclosing class
+                    </code></pre>
+                </p>
+                <br><br>
+                <b id="python">В Python</b>
+                <i>Python не предоставляет строгой приватности, но поддерживает соглашение об именах для обозначения
+                    приватных атрибутов.</i>
+                <br><br>
+                1. Соглашение об именах (одинарное подчёркивание):
+                <pre><code>
+                    class Person:
+                        def __init__(self, name):
+                        self._name = name  # "Приватный" атрибут
+
+                    def get_name(self):
+                        return self._name
+
+                    person = Person("Alice")
+                    print(person.get_name())  # Alice
+                    print(person._name)  # Доступ есть, но не рекомендуется
+                </code></pre>
+                <br><br>
+                2. Манглинг имен (двойное подчёркивание):
+                <i>Для большей защищённости Python использует механизм манглинга (искажения) имён, добавляя имя класса
+                    перед приватным атрибутом</i>
+                <br><br>
+                <pre><code>
+                    class Person:
+                        def __init__(self, name):
+                            self.__name = name  # Приватный атрибут
+
+                        def get_name(self):
+                            return self.__name
+
+                    person = Person("Alice")
+                    print(person.get_name())  # Alice
+                    print(person.__name)  # AttributeError
+                    print(person._Person__name)  # Alice
+                </code></pre>
+                <br><br>
+                <b id="csharp">В C#</b>
+                <i>C# предоставляет строгую поддержку инкапсуляции через модификаторы доступа (private, protected,
+                    public и т.д.).</i>
+                <br><br>
+                1. Приватные поля и публичные методы:
+                <br><br>
+                <pre>
+                    <code>
+                        class Person
+{
+    private string name; // Приватное поле
+
+    public Person(string name)
+    {
+        this.name = name;
+    }
+
+    public string GetName()
+    {
+        return name;
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Person person = new Person("Alice");
+        Console.WriteLine(person.GetName()); // Alice
+        // Console.WriteLine(person.name); // Ошибка компиляции
+    }
+}
+                    </code>
+                </pre>
+                <br><br>
+                2. Свойства (Properties):
+                <i>Свойства позволяют управлять доступом к приватным полям</i>
+                <pre>
+                    <code>
+                        class Person
+{
+    private string name;
+
+    public string Name
+    {
+        get { return name; }
+        set { name = value; }
+    }
+
+    public Person(string name)
+    {
+        this.name = name;
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Person person = new Person("Alice");
+        Console.WriteLine(person.Name); // Alice
+        person.Name = "Bob";
+        Console.WriteLine(person.Name); // Bob
+    }
+}
+                    </code>
+                </pre>
+                <p class="text">
+                    <b>Преимущества инкапсуляции</b>
+                    <br><br>
+                    <ul>
+                        <li><b>Безопасность данных:</b> Исключение возможности случайного изменения данных объекта.</li>
+                        <li><b>Удобство использования:</b> Четко определенный интерфейс делает объекты более понятными для других разработчиков.</li>
+                        <li><b>Гибкость:</b> Возможность изменения внутренней реализации без необходимости переписывать внешний код.</li>
+                        <li><b>Контроль доступа:</b> Логика работы с данными может быть дополнена проверками, логированием и другими функциональностями.</li>
+                    </ul>
+                </p>
+                <p class="text">
+                    <b>Заключение</b>
+                    <br><br>
+                    Инкапсуляция — это мощный инструмент, который делает ваш код более надежным, читаемым и поддерживаемым. В каждом
+                    языке программирования (JavaScript, Python, C#) существуют свои механизмы для её реализации, позволяющие создавать
+                    безопасные и удобные для работы объекты.
+                </p>
+            </div>
+        </section>
+    </section>
+
+    <script src="/js/menu.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
