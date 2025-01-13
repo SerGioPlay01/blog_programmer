@@ -157,6 +157,7 @@ details {
 }
 details summary {
     cursor: pointer;
+    width: fit-content;
 }
 pre {
     overflow-x: auto;
