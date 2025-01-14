@@ -3,4 +3,5 @@
 	src: url('GolosTextVF-Regular.woff2') format('woff2'), url('GolosTextVF-Regular.woff') format('woff');
 	font-weight: 1;
 	font-style: normal;
+	font-display: swap;
 }
