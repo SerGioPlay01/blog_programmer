@@ -71,11 +71,11 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
     margin-top: 5%;
     margin-bottom: 5%;
 }
-.page_content_type_list {
+.page_content_type_list, .hvgcgncvcf {
     padding: 30px;
     width: 80vw;
     min-height: 100vh;
