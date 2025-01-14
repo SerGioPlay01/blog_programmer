@@ -132,6 +132,7 @@ figure {
     margin-top: 1%;
 }
 figcaption {
+    width: 50%;
     font-style: italic;
     text-align: center;
 }
