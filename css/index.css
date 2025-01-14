@@ -82,10 +82,6 @@ body {
     background-color: rgb(255, 255, 255);
     border-radius: 20px;
 }
-.page_content_type_list {
-    max-height: 80vh;
-    overflow-y: auto;
-}
 .tag_name {
     font-weight: 700;
     padding-bottom: 10px;
@@ -95,6 +91,8 @@ body {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
+    max-height: 100vh;
+    overflow-y: auto;
     gap: 20px;
 }
 .link_to_post {
