@@ -4,12 +4,14 @@ function generatePasswords() {
   const includeLowercase = document.getElementById("includeLowercase").checked;
   const includeNumbers = document.getElementById("includeNumbers").checked;
   const includeSymbols = document.getElementById("includeSymbols").checked;
+  const template = document.getElementById("passwordTemplate").value;
 
   const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   const lowercase = "abcdefghijklmnopqrstuvwxyz";
   const numbers = "0123456789";
-  const symbols = "!@#$%^&*()_+[]{}|;:,.<>?";
-
+  const symbols = "!@#$%^&*";
+  
+  // Собираем пул символов на основе флажков
   let charPool = "";
   if (includeUppercase) charPool += uppercase;
   if (includeLowercase) charPool += lowercase;
@@ -21,22 +23,30 @@ function generatePasswords() {
     return;
   }
 
-  const passwords = [];
-  for (let i = 0; i < 5; i++) {
-    passwords.push(generateRandomPassword(length, charPool));
+  // Функция генерации пароля
+  function generatePassword(template) {
+    let password = "";
+    for (let i = 0; i < template.length; i++) {
+      const char = template[i];
+      if (char === "#") {
+        password += numbers[Math.floor(Math.random() * numbers.length)];
+      } else if (char === "A") {
+        password += uppercase[Math.floor(Math.random() * uppercase.length)];
+      } else if (char === "a") {
+        password += lowercase[Math.floor(Math.random() * lowercase.length)];
+      } else if (char === "-") {
+        password += "-";
+      } else {
+        password += char; // Для любых символов, которые в шаблоне
+      }
+    }
+    return password;
   }
 
-  document.getElementById("outputText1").value = passwords[0];
-  document.getElementById("outputText2").value = passwords[1];
-  document.getElementById("outputText3").value = passwords[2];
-  document.getElementById("outputText4").value = passwords[3];
-  document.getElementById("outputText5").value = passwords[4];
-}
-
-function generateRandomPassword(length, pool) {
-  let password = "";
-  for (let i = 0; i < length; i++) {
-    password += pool[Math.floor(Math.random() * pool.length)];
-  }
-  return password;
+  // Генерация 5 паролей
+  document.getElementById("outputText1").value = generatePassword(template);
+  document.getElementById("outputText2").value = generatePassword(template);
+  document.getElementById("outputText3").value = generatePassword(template);
+  document.getElementById("outputText4").value = generatePassword(template);
+  document.getElementById("outputText5").value = generatePassword(template);
 }
