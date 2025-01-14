@@ -41,7 +41,7 @@
   }
   textarea {
     width: 100%;
-    min-height: 50px;
+    min-height: 30px;
     height: auto;
     margin-bottom: 15px;
     border: 1px solid #ccc;
