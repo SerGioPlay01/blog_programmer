@@ -1,27 +1,29 @@
 function generatePassword() {
-    const length = parseInt(document.getElementById("passwordLength").value) || 12;
-    const template = document.getElementById("passwordTemplate").value.trim();
-    const includeUppercase = document.getElementById("includeUppercase").checked;
-    const includeLowercase = document.getElementById("includeLowercase").checked;
-    const includeNumbers = document.getElementById("includeNumbers").checked;
-    const includeSymbols = document.getElementById("includeSymbols").checked;
-  
-    const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    const lowercase = "abcdefghijklmnopqrstuvwxyz";
-    const numbers = "0123456789";
-    const symbols = "!@#$%^&*()_+[]{}|;:,.<>?";
-  
-    let charPool = "";
-    if (includeUppercase) charPool += uppercase;
-    if (includeLowercase) charPool += lowercase;
-    if (includeNumbers) charPool += numbers;
-    if (includeSymbols) charPool += symbols;
-  
-    if (!charPool) {
-      document.getElementById("outputText").value = "Выберите хотя бы один тип символов!";
-      return;
-    }
-  
+  const length = parseInt(document.getElementById("passwordLength").value) || 12;
+  const template = document.getElementById("passwordTemplate").value.trim();
+  const includeUppercase = document.getElementById("includeUppercase").checked;
+  const includeLowercase = document.getElementById("includeLowercase").checked;
+  const includeNumbers = document.getElementById("includeNumbers").checked;
+  const includeSymbols = document.getElementById("includeSymbols").checked;
+
+  const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const lowercase = "abcdefghijklmnopqrstuvwxyz";
+  const numbers = "0123456789";
+  const symbols = "!@#$%^&*()_+[]{}|;:,.<>?";
+
+  let charPool = "";
+  if (includeUppercase) charPool += uppercase;
+  if (includeLowercase) charPool += lowercase;
+  if (includeNumbers) charPool += numbers;
+  if (includeSymbols) charPool += symbols;
+
+  if (!charPool) {
+    document.getElementById("outputText").value = "Выберите хотя бы один тип символов!";
+    return;
+  }
+
+  // Функция генерации пароля с учетом шаблона
+  function generatePasswordFromTemplate(template) {
     let password = "";
     if (template) {
       password = template.replace(/A/g, () => getRandomChar(uppercase))
@@ -33,11 +35,14 @@ function generatePassword() {
         password += getRandomChar(charPool);
       }
     }
-  
-    document.getElementById("outputText").value = password;
+    return password;
   }
-  
-  function getRandomChar(pool) {
-    return pool[Math.floor(Math.random() * pool.length)];
-  }
-  
+
+  // Генерация пароля и вывод в текстовое поле
+  const generatedPassword = generatePasswordFromTemplate(template);
+  document.getElementById("outputText").value = generatedPassword;
+}
+
+function getRandomChar(pool) {
+  return pool[Math.floor(Math.random() * pool.length)];
+}
