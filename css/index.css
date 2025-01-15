@@ -75,10 +75,10 @@ body {
     margin-top: 5%;
     margin-bottom: 5%;
 }
-.all_news {
+/* .all_news {
     height: 50vh;
     overflow-y: auto;
-}
+} */
 .page_content_type_list, .hvgcgncvcf {
     padding: 30px;
     width: 80vw;
