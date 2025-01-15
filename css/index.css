@@ -166,9 +166,6 @@ details summary {
     cursor: pointer;
     width: fit-content;
 }
-.code-container {
-    position: relative;
-}
 pre {
     position: relative;
     overflow-x: auto;
@@ -181,18 +178,6 @@ pre {
 code {
     position: relative;
     font-size: 1em;
-}
-.copy_btn {
-      position: absolute;
-      top: 50px;
-      right: 50px;
-      background: #20b245;
-      color: #f8f8f2;
-      border: none;
-      padding: 5px 10px;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background 0.3s ease-in-out;
 }
 .list_nav {
     background-color: #ffffff;
@@ -214,10 +199,6 @@ code {
     }
     .link_post:hover {
         color: #054f18;
-        transition: 0.3s all ease-in-out;
-    }
-    .copy_btn:hover {
-        background-color: #158e33;
         transition: 0.3s all ease-in-out;
     }
 }
