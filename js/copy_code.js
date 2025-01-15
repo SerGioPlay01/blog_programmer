@@ -7,7 +7,7 @@ function copyCode() {
       button.textContent = "Скопировано!";
       button.disabled = true; // Отключаем кнопку временно
       setTimeout(() => {
-        button.textContent = "COPY CODE";
+        button.textContent = "Скопировать";
         button.disabled = false; // Включаем кнопку обратно
       }, 4000); // Через 4 секунды текст возвращается
     }).catch(err => {
