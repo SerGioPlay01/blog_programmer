@@ -62,8 +62,7 @@
                     <div class="list_nav">
                         <a href="#1" class="link_post">Описание алгоритма</a>
                         <a href="#2" class="link_post">Происхождение слово «последовательный»</a>
-                        <a href="#3" class="link_post">Код программы на C++</a>
-                        <a href="#4" class="link_post">Код программы на Pascal</a>
+                        <a href="#3" class="link_post">Код программы на Pascal</a>
                     </div>
                 </details>
                 <p class="text" id="1">
@@ -104,46 +103,8 @@
                     тождественных
                     элементов.
                 </p>
-                <h3 id="3">Код программы на C++:</h3>
-                <div class="code-container">
-                    <button class="copy_btn" id="copy-button" onclick="copyCode()">Скопировать</button>
-                    <pre>
-                      <code id="code-block">
-                        #include "stdafx.h"
-                        #include <iostream>
-                        #include <ctime>
-                        using namespace std;
-                        int i, N;
-                        //линейный поиск
-                        int LineSearch(int A[], int key)
-                        {
-                        for (i=0; i<N; i++)
-                        if (A[i]==key) return i;
-                        return -1;
-                        }
-                        //главная функция
-                        void main()
-                        {
-                        setlocale(LC_ALL,"Rus");
-                        int key, A[1000];
-                        srand(time(NULL));
-                        cout<<"Размер массива > "; cin>>N;
-                        cout<<"Искомый элемент > "; cin>>key;
-                        cout<<"Исходный массив: ";
-                        for (i=0; i<N; i++)
-                        {
-                        A[i]=rand()%10;
-                        cout<<A[i]<<" ";
-                        }
-                        if (LineSearch(A, key)==-1) cout<<"\nЭлемент не найден";
-                        else cout<<"\nНомер элемента: "<<LineSearch(A, key)+1;
-                        system("pause>>void");
-                        }
-                      </code>
-                    </pre>
-                </div>
 
-                <h3 id="4">Код программы на Pascal:</h3>
+                <h3 id="3">Код программы на Pascal:</h3>
                 <div class="code-container">
                     <button class="copy_btn" id="copy-button" onclick="copyCode()">Скопировать</button>
                     <pre>
