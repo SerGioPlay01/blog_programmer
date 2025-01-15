@@ -76,13 +76,12 @@ body {
     margin-bottom: 5%;
 }
 .all_news {
-    max-height: 20vh;
+    max-height: 30vh;
     overflow-y: auto;
 }
 .page_content_type_list, .hvgcgncvcf {
     padding: 30px;
     width: 80vw;
-    min-height: 100vh;
     background-color: rgb(255, 255, 255);
     border-radius: 20px;
 }
