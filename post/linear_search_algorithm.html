@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#3aea66">
+    <meta name="title" content="Алгоритм линейного поиска">
+    <meta name="description" content="Для нахождения некоторого элемента (ключа) в заданном неупорядоченном массиве используется алгоритм линейного (последовательного) поиска. Он работает как с неотсортированными массивами, так и отсортированными, но для вторых существуют алгоритмы эффективнее линейного поиска.">
+    <meta name="author" content="Блог программиста">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph (og) метатеги -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Алгоритм линейного поиска">
+    <meta property="og:description" content="Для нахождения некоторого элемента (ключа) в заданном неупорядоченном массиве используется алгоритм линейного (последовательного) поиска. Он работает как с неотсортированными массивами, так и отсортированными, но для вторых существуют алгоритмы эффективнее линейного поиска.">
+    <meta property="og:url" content="/post/russian_neural_networks_online_for_all_occasions.html">
+    <meta property="og:image" content="/resources/images/preview.jpg">
+    <meta property="og:image:width" content="1920">
+    <meta property="og:image:height" content="768">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:site_name" content="Блог программиста">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="/resources/site.webmanifest" />
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/menu.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Алгоритм линейного поиска</title>
+</head>
+
+<body>
+    <header class="top_header">
+        <div class="logo_div">
+            <span class="logo"></span>
+            <h2 class="name_site">Блог Программиста</h2>
+        </div>
+        <div class="menu_icon_div">
+            <span class="icon" id="open_menu"></span>
+        </div>
+    </header>
+
+    <div class="menu_div" id="menu">
+        <div class="list_el_menu">
+            <a href="/" class="link_menu">Главная</a>
+            <a href="https://super-empanada-b0a124.netlify.app/" class="link_menu">Автор блога</a>
+        </div>
+        <div class="social_link">
+
+        </div>
+        <span class="icon_close" id="close_menu"></span>
+    </div>
+
+    <section class="center_page_conent">
+        <section class="page_content_type_list">
+            <h2 class="tag_name">Алгоритм линейного поиска</h2>
+            <div class="content_post">
+                <details class="link_yakors">
+                    <summary>Содержание страницы</summary>
+                    <div class="list_nav">
+                        <a href="#1" class="link_post">Описание алгоритма</a>
+                        <a href="#2" class="link_post">Происхождение слово «последовательный»</a>
+                        <a href="#3" class="link_post">Код программы на C++</a>
+                        <a href="#4" class="link_post">Код программы на Pascal</a>
+                    </div>
+                </details>
+                <p class="text" id="1">
+                    Для нахождения некоторого элемента (ключа) в заданном неупорядоченном массиве используется алгоритм
+                    линейного (последовательного) поиска. Он работает как с неотсортированными массивами, так и
+                    отсортированными, но для вторых существуют алгоритмы эффективнее линейного поиска.
+                    <br><br>
+                    Эту неэффективность компенсируют простая реализация алгоритма и сама возможность применять его к
+                    неупорядоченным последовательностям. Здесь, а также при рассмотрении всех других алгоритмов поиска,
+                    будем полагать, что в качестве ключа выступает некоторая величина, по мере выполнения алгоритма,
+                    сравниваемая именно со значениями элементов массива.
+                </p>
+                <h3 id="2">Алгоритм линейного поиска</h3>
+                <p class="text">
+                    Слово «последовательный» содержит в себе основную идею метода. Начиная с первого, все элементы
+                    массива последовательно просматриваются и сравниваются с искомым. Если на каком-то шаге текущий
+                    элемент окажется равным искомому, тогда элемент считается найденным, и в качестве результата
+                    возвращается номер этого элемента, либо другая информация о нем. (Далее, в качестве выходных данных
+                    будет выступать номер элемента). Иначе, следуют возвратить что-то, что может оповестить о его
+                    отсутствии в пройденной последовательности.
+                    <br><br>
+                    Ниже, на примере фигур, наглядно демонстрируется работа алгоритма линейного поиска. В качестве
+                    искомого элемента (в данном случае это квадрат) задается фигура, и она поочередно сравнивается со
+                    всеми имеющимися фигурами до тех пор, пока не будет найдена тождественная ей фигура, или окажется,
+                    что в данном множестве таковой нет.
+                </p>
+                <figure>
+                    <img src="/resources/images/line_search.gif" alt="" class="img_post">
+                    <figcaption>На примере фигур, наглядно демонстрируется работа алгоритма линейного поиска.
+                    </figcaption>
+                </figure>
+                <p class="text">
+                    Примечателен тот факт, что имеется вероятность наличия нескольких элементов с одинаковыми
+                    значениями, совпадающими
+                    со значением ключа. В таком случае, если нет конкретных условий, можно, например, за результирующий
+                    взять номер
+                    первого найденного элемента (реализовано в листинге ниже), или записать в массив номера всех
+                    тождественных
+                    элементов.
+                </p>
+                <h3 id="3">Код программы на C++:</h3>
+                <div class="code-container">
+                    <button class="copy_btn" id="copy-button" onclick="copyCode()">Скопировать</button>
+                    <pre>
+                      <code id="code-block">
+                        #include "stdafx.h"
+                        #include <iostream>
+                        #include <ctime>
+                        using namespace std;
+                        int i, N;
+                        //линейный поиск
+                        int LineSearch(int A[], int key)
+                        {
+                        for (i=0; i<N; i++)
+                        if (A[i]==key) return i;
+                        return -1;
+                        }
+                        //главная функция
+                        void main()
+                        {
+                        setlocale(LC_ALL,"Rus");
+                        int key, A[1000];
+                        srand(time(NULL));
+                        cout<<"Размер массива > "; cin>>N;
+                        cout<<"Искомый элемент > "; cin>>key;
+                        cout<<"Исходный массив: ";
+                        for (i=0; i<N; i++)
+                        {
+                        A[i]=rand()%10;
+                        cout<<A[i]<<" ";
+                        }
+                        if (LineSearch(A, key)==-1) cout<<"\nЭлемент не найден";
+                        else cout<<"\nНомер элемента: "<<LineSearch(A, key)+1;
+                        system("pause>>void");
+                        }
+                      </code>
+                    </pre>
+                </div>
+
+                <h3 id="4">Код программы на Pascal:</h3>
+                <div class="code-container">
+                    <button class="copy_btn" id="copy-button" onclick="copyCode()">Скопировать</button>
+                    <pre>
+                      <code id="code-block">
+                        program linearSearch;
+                        uses crt;
+                        type Arr=array[1..1000] of integer;
+                        var key, i, N: integer;
+                        A: Arr;
+                        {линейный поиск}
+                        function lineSearch(A: Arr; key: integer): integer;
+                        begin
+                        lineSearch:=-1;
+                        for i:=1 to N do
+                        if A[i]=key then
+                        begin lineSearch:=i; exit; end;
+                        end;
+                        {основной блок программы}
+                        begin
+                        randomize;
+                        write('Размер массива > '); readln(N);
+                        write('Искомый элемент > '); read(key);
+                        write('Исходный массив: ');
+                        for i:=1 to N do
+                        begin
+                        A[i]:=random(10);
+                        write(A[i],' ');
+                        end;
+                        writeln;
+                        if (lineSearch(A, key)=-1) then write('Элемент не найден')
+                        else write('Номер элемента: ', lineSearch(A, key));
+                        end.
+                      </code>
+                    </pre>
+                </div>
+
+                <p class="text">
+                    В лучшем случае, когда искомый элемент занимает первую позицию, алгоритм произведет всего одно сравнение, а в худшем
+                    N, где N — количество элементов в массиве. Худшему случаю соответствуют две ситуации: искомый элемент занимает
+                    последнюю позицию, или он вовсе отсутствует в массиве.
+                    <br><br>
+                    Алгоритм линейного поиска не часто используется на практике, поскольку принцип работы «в лоб» делает скорость
+                    решения им задачи очень низкой. Его применение оправдано на небольших и/или неотсортированных последовательностях,
+                    но когда последовательность состоит из большого числа элементов, и с ней предстоит работать не раз, тогда наиболее
+                    оптимальным решением оказывается предварительная сортировка этой последовательности с последующим применением
+                    двоичного или другого, отличного от линейного, алгоритма поиска.
+                </p>
+
+            </div>
+        </section>
+    </section>
+
+    <script src="/js/menu.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
