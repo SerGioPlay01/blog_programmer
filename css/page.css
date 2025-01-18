@@ -67,7 +67,10 @@
   button:hover {
     background-color: #0b6a23;
   }
-  
+  #jsonOutput {
+    max-height: 400px;
+    overflow-y: auto;
+  }
   pre {
     background: #f0f0f0;
     padding: 10px;
