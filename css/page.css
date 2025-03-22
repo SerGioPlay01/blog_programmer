@@ -178,8 +178,8 @@ input[type="color"], input[type="text"] {
 }
 
 input[type="color"] {
-  width: 50px;
-  height: 30px;
+  width: 150px;
+  height: 150px;
 }
 
 button {
