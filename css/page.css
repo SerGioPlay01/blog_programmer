@@ -204,8 +204,8 @@ button:hover {
 }
 
 .color-box {
-  width: 100px;
-  height: 100px;
+  width: 45%;
+  height: auto;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
