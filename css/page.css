@@ -102,3 +102,33 @@
   .text {
     margin-bottom: 1%;
   }
+
+.converter-box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-group, .select-group, .settings-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.select-group {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.result {
+    margin-top: 20px;
+    padding: 10px;
+    background: #f0f0f0;
+    border-radius: 5px;
+    text-align: center;
+}
