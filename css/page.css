@@ -138,7 +138,7 @@ label {
   border-radius: 10px;
   padding: 20px;
   margin: 20px auto;
-  max-width: 600px;
+  max-width: 80%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -148,3 +148,7 @@ h1 {
   color: #1a3c34;
 }
 
+input {
+  height: 60px;
+  width: 90%;
+}
